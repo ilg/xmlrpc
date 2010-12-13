@@ -311,6 +311,7 @@
     NSDate *result = nil;
     
     [dateFormatter setDateFormat: format];
+	[dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"US/Eastern"]];
     
     result = [dateFormatter dateFromString: dateString];
     
