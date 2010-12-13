@@ -23,3 +23,9 @@
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
 #endif
+
+#ifdef DEBUG
+	#define DLOG(s...) NSLog(@"%s:%d %@",__PRETTY_FUNCTION__,__LINE__,[NSString stringWithFormat:s])
+#else
+	#define DLOG(s...)
+#endif
